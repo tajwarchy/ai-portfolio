@@ -16,11 +16,8 @@ export default function Nav() {
 
   useEffect(() => {
     setMounted(true);
-    // Check system preference and stored preference
-    const stored = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const isDarkMode = stored ? stored === 'dark' : prefersDark;
-    
+    // Force light mode on initial load.
+    const isDarkMode = false;
     setIsDark(isDarkMode);
     updateTheme(isDarkMode);
   }, []);
