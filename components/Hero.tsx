@@ -26,13 +26,11 @@ export default function Hero() {
           >
             Get in Touch
           </a>
-          {/* TODO: replace href with /resume.pdf once ready, then remove aria-disabled */}
           <a
-            href="#"
+            href="/resume.pdf"
             className={styles.btnResume}
-            aria-disabled="true"
-            tabIndex={-1}
-            title="Resume coming soon"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Resume
             <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
