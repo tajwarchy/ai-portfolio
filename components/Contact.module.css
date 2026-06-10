@@ -1,0 +1,42 @@
+.section {
+  padding: 72px 0 80px;
+}
+
+.sub {
+  margin-top: var(--space-3);
+  font-size: var(--font-size-md);
+  max-width: 480px;
+  line-height: 1.6;
+  margin-bottom: var(--space-8);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-6);
+}
+
+.channel {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.link {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  transition: color var(--motion-fast) ease;
+}
+.link:hover { color: var(--color-text-secondary); }
