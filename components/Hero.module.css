@@ -75,25 +75,6 @@
   background: var(--color-surface-muted);
 }
 
-.btnResume {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-1);
-  padding: var(--space-3) var(--space-6);
-  border-radius: var(--radius-sm);
-  font-size: var(--font-size-xs);
-  font-weight: 600;
-  background: transparent;
-  color: var(--color-text-secondary);
-  border: 1px dashed var(--color-border-default);
-  cursor: pointer;
-  opacity: 1;
-  pointer-events: auto;
-}
-.btnResume:hover {
-  background: var(--color-surface-muted);
-}
-
 .badges {
   display: flex;
   flex-wrap: wrap;

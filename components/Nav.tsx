@@ -4,11 +4,9 @@ import { useEffect, useState } from 'react';
 import styles from './Nav.module.css';
 
 const links = [
-  { label: 'Services',       href: '#services' },
-  { label: 'Case Studies',   href: '#projects' },
-  { label: 'Skills',         href: '#skills' },
-  { label: 'Sample Projects', href: '#more-projects' },
-  { label: 'Contact',        href: '#contact' },
+  { label: 'Services',     href: '#services' },
+  { label: 'Case Studies', href: '#projects' },
+  { label: 'Contact',      href: '#contact' },
 ];
 
 export default function Nav() {

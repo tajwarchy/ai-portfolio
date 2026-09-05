@@ -3,8 +3,6 @@ import ProjectCard from './ProjectCard';
 import styles from './Projects.module.css';
 
 export default function Projects() {
-  const featured = projects.filter(p => p.featured);
-
   return (
     <section id="projects" className={styles.section} aria-labelledby="projects-heading">
       <div className="container">
@@ -18,7 +16,7 @@ export default function Projects() {
           </p>
         </div>
         <div className={styles.grid} role="list">
-          {featured.map(p => (
+          {projects.map(p => (
             <div key={p.slug} role="listitem">
               <ProjectCard project={p} />
             </div>
