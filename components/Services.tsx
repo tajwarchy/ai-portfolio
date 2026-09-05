@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import styles from './Services.module.css';
 
 interface Service {
@@ -5,7 +6,39 @@ interface Service {
   forWho: string;
   problem: string;
   delivers: string[];
+  icon: ReactNode;
 }
+
+const BookIcon = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+    <path d="M12 6.5c-1.6-1.2-3.8-1.8-6-1.8v13c2.2 0 4.4.6 6 1.8" />
+    <path d="M12 6.5c1.6-1.2 3.8-1.8 6-1.8v13c-2.2 0-4.4.6-6 1.8" />
+    <path d="M12 6.5v13" />
+  </svg>
+);
+
+const WorkflowIcon = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+    <circle cx="12" cy="5.5" r="2.5" />
+    <path d="M12 8v3" />
+    <path d="M6 15.5h12" />
+    <path d="M6 11v4.5" />
+    <path d="M18 11v4.5" />
+    <rect x="3.5" y="15.5" width="5" height="4" rx="1" />
+    <rect x="9.5" y="15.5" width="5" height="4" rx="1" />
+    <rect x="15.5" y="15.5" width="5" height="4" rx="1" />
+  </svg>
+);
+
+const RocketIcon = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+    <path d="M12 2.5c2.4 1.7 3.8 4.6 3.8 8 0 2-.5 3.7-1.2 5l-2.6 2.6-2.6-2.6c-.7-1.3-1.2-3-1.2-5 0-3.4 1.4-6.3 3.8-8z" />
+    <circle cx="12" cy="9.5" r="1.6" />
+    <path d="M9.2 15.5 6.5 17c-.4-1.4-.3-3 .3-4.3" />
+    <path d="M14.8 15.5 17.5 17c.4-1.4.3-3-.3-4.3" />
+    <path d="M10.4 18.5c.4 1 1 1.8 1.6 2.5.6-.7 1.2-1.5 1.6-2.5" />
+  </svg>
+);
 
 const services: Service[] = [
   {
@@ -19,6 +52,7 @@ const services: Service[] = [
       'Chat interface or API — whichever fits how your team already works',
       'Ingestion pipeline that keeps the assistant current as docs change',
     ],
+    icon: BookIcon,
   },
   {
     name: 'Workflow Automation Sprint',
@@ -31,6 +65,7 @@ const services: Service[] = [
       'Error handling built in, not bolted on after the first failure',
       'A system your team can hand off leads/reports/tasks to, not babysit',
     ],
+    icon: WorkflowIcon,
   },
   {
     name: 'AI Feature Launch',
@@ -43,6 +78,7 @@ const services: Service[] = [
       'Authentication, permissions, and testing handled, not skipped',
       'Deployed into your existing product, not a standalone demo',
     ],
+    icon: RocketIcon,
   },
 ];
 
@@ -60,8 +96,13 @@ export default function Services() {
         <div className={styles.grid} role="list">
           {services.map(s => (
             <article key={s.name} className={styles.card} role="listitem">
-              <h3 className={styles.name}>{s.name}</h3>
-              <p className={styles.forWho}>{s.forWho}</p>
+              <div className={styles.top}>
+                <div className={styles.iconBadge} aria-hidden="true">{s.icon}</div>
+                <div className={styles.topText}>
+                  <h3 className={styles.name}>{s.name}</h3>
+                  <p className={styles.forWho}>{s.forWho}</p>
+                </div>
+              </div>
               <p className={styles.problem}>{s.problem}</p>
               <ul className={styles.delivers} role="list">
                 {s.delivers.map(d => (
