@@ -4,27 +4,29 @@ export default function Hero() {
   return (
     <section className={styles.hero} aria-label="Introduction">
       <div className={`${styles.inner} container`}>
-        <p className={styles.label} aria-hidden="true">AI Engineer</p>
+        <p className={styles.label} aria-hidden="true">Freelance AI Engineer</p>
         <h1 className={styles.name}>
           Mohammad Tajwar<br />Chowdhury
         </h1>
         <p className={styles.bio}>
-          I build production-grade AI systems; RAG pipelines, autonomous agents,
-          fine-tuned LLMs, and multi-agent orchestration; with an emphasis on
-          system design, observability, and measurable results.
-          Every project here is built from a first-principles understanding of
-          what the framework abstracts away.
+          I don&apos;t sell RAG pipelines or agent frameworks. I solve the
+          problems those things are supposed to fix: documentation scattered
+          across five tools that nobody can search, a repetitive workflow
+          quietly eating a founder&apos;s week, a product roadmap stuck behind
+          an AI feature no one on the team knows how to ship. I build the
+          system, ship it into production, and hand over something that
+          keeps working after I&apos;m gone.
         </p>
         <p className={styles.edu}>
           B.Sc in Computer Science · BRAC University · Class of 2025
         </p>
         <div className={styles.actions}>
-          <a href="#projects" className={styles.btnPrimary}>View Projects</a>
+          <a href="#services" className={styles.btnPrimary}>See How I Can Help</a>
           <a
-            href="mailto:tajwarchy.work@gmail.com"
+            href="#projects"
             className={styles.btnSecondary}
           >
-            Get in Touch
+            View Case Studies
           </a>
           <a
             href="/resume.pdf"
@@ -39,7 +41,7 @@ export default function Hero() {
           </a>
         </div>
         <ul className={styles.badges} aria-label="Focus areas" role="list">
-          {['RAG Systems', 'Autonomous Agents', 'LLM Fine-Tuning', 'Multi-Agent Orchestration', 'MLOps'].map(b => (
+          {['AI Knowledge Systems', 'Workflow Automation', 'AI Feature Integration', 'RAG', 'Agentic Systems'].map(b => (
             <li key={b} className={styles.badge}>{b}</li>
           ))}
         </ul>

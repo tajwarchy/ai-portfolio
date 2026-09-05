@@ -7,6 +7,14 @@
   font-size: var(--font-size-lg);
   font-weight: 700;
   color: var(--color-text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.subheading {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 520px;
   margin-bottom: var(--space-8);
 }
 

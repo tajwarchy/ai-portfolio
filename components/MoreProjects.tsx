@@ -32,7 +32,11 @@ export default function MoreProjects() {
   return (
     <section id="more-projects" ref={sectionRef} className={styles.section} aria-labelledby="more-heading">
       <div className="container">
-        <h2 id="more-heading" className={styles.heading}>More projects</h2>
+        <h2 id="more-heading" className={styles.heading}>Sample Projects</h2>
+        <p className={styles.subheading}>
+          Additional applied ML/computer-vision experiments — technical samples rather than
+          full client-style case studies.
+        </p>
         <ul className={styles.list} ref={listRef} role="list">
           {visibleProjects.map(p => (
             <li key={p.slug} className={styles.item}>

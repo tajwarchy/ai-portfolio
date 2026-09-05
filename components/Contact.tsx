@@ -25,9 +25,11 @@ export default function Contact() {
   return (
     <section id="contact" className={styles.section} aria-labelledby="contact-heading">
       <div className="container">
-        <h2 id="contact-heading">Get in Touch</h2>
+        <h2 id="contact-heading">Let&apos;s Solve Your Problem</h2>
         <p className={styles.sub}>
-          Open to AI Engineering roles. Feel free to reach out via any of the channels below.
+          Open to new freelance projects. Tell me what&apos;s costing you time or money, and
+          I&apos;ll tell you honestly whether an AI system is the right fix — reach out via
+          any of the channels below.
         </p>
         <ul className={styles.list} role="list">
           {links.map(l => (

@@ -20,6 +20,12 @@ export default function ProjectCard({ project }: Props) {
       )}
 
       <div className={styles.body}>
+        {project.isConcept && (
+          <span className={styles.conceptBadge}>
+            Concept project — spec work, not a paid client engagement
+          </span>
+        )}
+
         <div className={styles.top}>
           <h3 className={styles.title}>{project.title}</h3>
           {project.highlight && (
@@ -29,7 +35,36 @@ export default function ProjectCard({ project }: Props) {
           )}
         </div>
 
-        <p className={styles.desc}>{project.description}</p>
+        {project.offering && (
+          <span className={styles.offeringTag}>Demonstrates: {project.offering}</span>
+        )}
+
+        {project.audience && (
+          <p className={styles.audience}><strong>Who it&apos;s for:</strong> {project.audience}</p>
+        )}
+
+        {project.problem && (
+          <div className={styles.caseBlock}>
+            <span className={styles.caseLabel}>Problem</span>
+            <p className={styles.caseText}>{project.problem}</p>
+          </div>
+        )}
+
+        {project.approach && (
+          <div className={styles.caseBlock}>
+            <span className={styles.caseLabel}>Approach</span>
+            <p className={styles.caseText}>{project.approach}</p>
+          </div>
+        )}
+
+        {project.outcome && (
+          <div className={styles.caseBlock}>
+            <span className={styles.caseLabel}>Outcome</span>
+            <p className={styles.caseText}>{project.outcome}</p>
+          </div>
+        )}
+
+        {!project.problem && <p className={styles.desc}>{project.description}</p>}
 
         <ul className={styles.tags} role="list" aria-label="Technologies">
           {project.tags.map(t => (

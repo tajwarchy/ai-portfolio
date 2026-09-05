@@ -9,10 +9,12 @@ export default function Projects() {
     <section id="projects" className={styles.section} aria-labelledby="projects-heading">
       <div className="container">
         <div className={styles.header}>
-          <h2 id="projects-heading">AI Engineering</h2>
+          <h2 id="projects-heading">Portfolio Case Studies</h2>
           <p className={styles.sub}>
-            Five production-grade systems; RAG, agents, fine-tuning, and multi-agent orchestration.
-            Every project is built and evaluated locally, fully open-source.
+            Five self-initiated concept projects, each framed as a client engagement would be:
+            who it&apos;s for, what problem it solved, how, and what a result like this typically
+            looks like in the real world. These are personal spec-work builds, not paid client
+            projects — but each one mirrors the architecture and process I use on real engagements.
           </p>
         </div>
         <div className={styles.grid} role="list">
